@@ -11,8 +11,8 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li id="application-nav"><%=  link_to "Home", home_index_path %></li>
-      <li id="application-nav"><%=  link_to "Sign Up", home_index_path %></li>
-      <li id="application-nav"><%=  link_to "Sign In", home_index_path  %></li>
+      <li id="application-nav"><%=  link_to "Sign Up", new_user_registration_path %></li>
+      <li id="application-nav"><%=  link_to "Sign In", new_user_session_path %></li>
     </ul>
   <%= yield %>
   </div>
