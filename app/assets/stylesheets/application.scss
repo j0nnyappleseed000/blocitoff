@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "home";
+
 li#application-nav {
   text-align: right;
 }
@@ -11,4 +13,8 @@ li#application-nav {
 
 .nav {
   margin-top: 5px;
+}
+
+.buffer {
+  margin-top: 100px;
 }
