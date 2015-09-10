@@ -1,7 +1,17 @@
 class ItemsController < ApplicationController
 
   def create
-    @item = Item.new
+    @item = current_user.items.create(item_params)
+    if @item.save
+      
+    else
+    
+    end
   end
   
+  private
+
+  def item_params
+
+  end
 end
