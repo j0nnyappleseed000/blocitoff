@@ -21,8 +21,7 @@ items = Item.all
 admin = User.new(
    name:     'Admin User',
    email:    'admin@example.com',
-   password: 'helloworld',
-   role:     'admin'
+   password: 'helloworld'
  )
  admin.skip_confirmation!
  admin.save!
