@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, :show
-    resources :items, only: [:create]
+  resources :items, only: [:create, :destroy]
 
   get 'home/index'
 

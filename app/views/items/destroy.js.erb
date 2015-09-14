@@ -1,5 +1,7 @@
 <% if @item.destroyed? %>
-   $('#item-' +<%= @item.id %>).hide();
+  console.log('item was destroyed');
+   $('#item-' +<%= @item.id %>).fadeOut();
  <% else %>
+  console.log('item was not destroyed');
    $('#item-' +<%= @item.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>");
  <% end %>
