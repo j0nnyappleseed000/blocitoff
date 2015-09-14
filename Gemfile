@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'devise'
 gem 'figaro', '1.0'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'byebug'
