@@ -1,5 +1,27 @@
-<h1>Welcome <%= @user.name %></h1>
+<div class="container">
+  <div class="row buffer">
+    <div class="col-md-12 text-left">
+    <div class="col-md-6 col-md-offset-3 todo-page">
+      <h2><%= @user.name %>'s To-Do List</h2>    
+      <p>To-do lists are notorious for collecting junk: to-do items that you want to remember, but are not very important and thus get consistently put-off. Blocitoff will aim to keep to-do lists manageable by automatically deleting to-do items that have not been completed after seven days. The idea is that if the to-do item is not important enough to be completed in seven days, it doesn't belong on your to-do list.</p>
 
-<%= render partial: 'items/form', locals: {user: @user} %>
+      <table class= "table table-striped table-bordered table-hover" data-sort-name="description" data-sort-order="desc">
+        <thead>
+          <tr>
+            <th data-sortable="true">Description</th>
+            <th data-field="days" data-align="center" data-sortable="true">Days left</th>
+            <th data-field="name" data-align="center" data-sortable="true">Complete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: 'items/item', collection: @items, locals: {user: @user} %>
+        </tbody>
+        <tbody>
+          <%= render partial: 'items/form', locals: {user: @user} %>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= render partial: 'items/item', collection: @items, locals: {user: @user} %>
